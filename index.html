@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Tribute Page</title>
+    
+    <!-- JavaScript Style -->
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="asset/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/d8c6a430bc.css">
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header-title">
+                <h2 id="title">Didi Kempot</h2>
+                <h3>The Godfather of Broken Heart</h3><hr>
+            </div>
+        </div>
+    </header>
+
+    <main id="main" >
+        <!-- Image Gallery -->
+        <section id="gallery">
+            <div class="container">
+                <div id="img-div" class="row" >
+                    <div id="image" class="col-4 col-s-4">
+                        <img src="asset/images/didi_kempot_img1.jpg" onclick="onClick(this)" alt="didi-song1">
+                        <img src="asset/images/didi_kempot_img2.jpg" onclick="onClick(this)" alt="didi-song2">
+                        <img src="asset/images/didi_kempot_img3.jpg" onclick="onClick(this)" alt="didi-song3">
+                    </div>
+                    <div id="image" class="col-4 col-s-4">
+                        <img src="asset/images/didi_kempot_img4.jpg" onclick="onClick(this)" alt="didi-song4">
+                        <img src="asset/images/didi_kempot_img5.jpg" onclick="onClick(this)" alt="didi-song5">
+                        <img src="asset/images/didi_kempot_img7.jpg" onclick="onClick(this)" alt="didi-song7">
+                    </div>
+                    <div id="image" class="col-4 col-s-4">
+                        <img src="asset/images/didi_kempot_img8.jpg" onclick="onClick(this)" alt="didi-song8">
+                        <img src="asset/images/didi_kempot_img6.jpg" onclick="onClick(this)" alt="didi-song6">
+                        <img src="asset/images/didi_kempot_img9.jpg" onclick="onClick(this)" alt="didi-song9">
+                    </div>
+                    <!-- Modal Image -->
+                    <div id="modal01" class="modal" onclick="this.style.display='none'">
+                        <span class="close">&times;</span>
+                        <div>
+                            <img id="img01" class="modal-content">
+                            <p id="caption"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="images-text">
+                    <h5 id="img-caption">Legendary Campursari Singer Didi Kempot</h5>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Biography -->
+        <section id="tribute-info">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Biography</h2>
+                    <hr>
+                </div>
+                <div class="row">
+                    <div class="col-8 col-s-8">
+                        <div class="card bio">
+                            <article>
+                                <h4 class="sect-sub-title">Personal life</h4>
+                                <p>Dhidhik Prasetya: born in Surakarta, Central Java, December 31, 1966 - died in Surakarta, Central Java, May 5, 2020 at the age of 53 years) or better known as his stage name Didi Kempot is a singer and songwriter campursari and congdut from Surakarta. He is the son of the famous traditional artist, Ranto Edi Gudel (known as Mbah Ranto), as well as the younger brother of Srimulat's senior comedian, Mamiek Prakoso.</p>
+                                <p>Most of the songs he wrote have the theme of heartbreak and loss. The reason for deliberately choosing this theme is because the average person has experienced it and wants to be close to the community, is also the reason for Didi Kempot to use place names as the title or lyrics of his songs. 
+                                    Didi Kempot was an Indonesian singer and songwriter in the campursari style. He wrote some 700 songs, mainly in his native Javanese language.
+                                    Apart from Indonesia, Didi was also popular in Suriname and the Netherlands, both of which have significant Javanese diaspora population.</p>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="col-4 col-s-4">
+                        <div class="card info">
+                            <article>
+                                <h4 class="sect-sub-title">Background Information</h4>
+                                <br>
+                                <table>
+                                    <tr>
+                                        <th>Birth Name</th>
+                                        <td>:</td>
+                                        <td>Didik Prasetyo</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Gender</th>
+                                        <td>:</td>
+                                        <td>Male</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Born</th>
+                                        <td>:</td>
+                                        <td>31 December 1966</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Died</th>
+                                        <td>:</td>
+                                        <td>05 May 2020 (aged 53)</td>
+                                    </tr>
+                                    <tr>
+                                        <th>City - Province </th>
+                                        <td>:</td>
+                                        <td>Surakarta, Central Java</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Nation</th>
+                                        <td>:</td>
+                                        <td>Indonesia</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Profession</th>
+                                        <td>:</td>
+                                        <td>Singer & Songwriter</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Genres</th>
+                                        <td>:</td>
+                                        <td>Campursari</td>
+                                    </tr>
+                                    <tr>
+                                        <th>Instruments</th>
+                                        <td>:</td>
+                                        <td>Vocals</td>
+                                    </tr>
+                                </table>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Discography -->
+        <section id="tribute-discography">
+            <div class="discography">
+                <div class="container">
+                    <div class="section-header">
+                        <h2 class="section-title">Discography</h2>
+                        <hr>
+                    </div>
+                    <div class="row">
+                        <div class="col-4 col-s-4 album">
+                            <h3 class="album-title">Album</h3>
+                            <div class="accordion-album">
+                                <button class="accordion-btn">
+                                    <h4 class="sect-sub-title">1997 - Eling Kowe</h4>
+                                </button>
+                                <div class="accordion-panel">
+                                    <div class="row">
+                                        <div class="col-6 col-s-6">
+                                            <ul>
+                                                <ol>Eling Kowe</ol>
+                                                <ol>Sarintul</ol>
+                                                <ol>Kalung Emas</ol>
+                                                <ol>Pupute Tresno</ol>
+                                                <ol>Jangan Pare</ol>
+                                            </ul>
+                                        </div>
+                                        <div class="col-6 col-s-6">
+                                            <ul>
+                                                <ol>Kuncung</ol>
+                                                <ol>Lilo</ol>
+                                                <ol>Sego Liwet</ol>
+                                                <ol>Nasib Mujur</ol>
+                                                <ol>Tombo Teko Loro Lungo</ol>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    
+                                </div>
+                            </div>
+
+                            <!-- Accordion -->
+                            <div class="accordion-album">
+                                <button class="accordion-btn">
+                                    <h4 class="sect-sub-title">2000 - Sukses</h4>
+                                </button>
+                                <div class="accordion-panel">
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.</p>
+                                </div>
+                            </div>
+                            <div class="accordion-album">
+                                <button class="accordion-btn">
+                                    <h4 class="sect-sub-title">2001 - Sewu Kutho</h4>
+                                </button>
+                                <div class="accordion-panel">
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.</p>
+                                </div>
+                            </div>
+                            <div class="accordion-album">
+                                <button class="accordion-btn">
+                                    <h4 class="sect-sub-title">2002 - King of Tembang Jawa</h4>
+                                </button>
+                                <div class="accordion-panel">
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-s-4 album">
+                            <h3 class="album-title">Album</h3>
+                            <div class="accordion-album">
+                                <button class="accordion-btn">
+                                    <h4 class="sect-sub-title">2007 - Hotel Malioboro</h4>
+                                </button>
+                                <div class="accordion-panel">
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.</p>
+                                </div>
+                            </div>
+                            <div class="accordion-album">
+                                <button class="accordion-btn">
+                                    <h4 class="sect-sub-title">2010 - Campursari In Fantasy Orchestra</h4>
+                                </button>
+                                <div class="accordion-panel">
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.</p>
+                                </div>
+                            </div>
+                            <div class="accordion-album">
+                                <button class="accordion-btn">
+                                    <h4 class="sect-sub-title">2012 - Didi Kempot Get Joss</h4>
+                                </button>
+                                <div class="accordion-panel">
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.</p>
+                                </div>
+                            </div>
+                            <div class="accordion-album">
+                                <button class="accordion-btn">
+                                    <h4 class="sect-sub-title">2015 - Top Hit Didi Kempot Parangtritis</h4>
+                                </button>
+                                <div class="accordion-panel">
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-4 col-s-4 album">
+                            <h3 class="album-title">Album</h3>
+                            <div class="accordion-album">
+                                <button class="accordion-btn">
+                                    <h4 class="sect-sub-title">2016 - Ketaman Asmoro</h4>
+                                </button>
+                                <div class="accordion-panel">
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.</p>
+                                </div>
+                            </div>
+                            <div class="accordion-album">
+                                <button class="accordion-btn">
+                                    <h4 class="sect-sub-title">2017 - Keroncong Penuh Kenangan</h4>
+                                </button>
+                                <div class="accordion-panel">
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.</p>
+                                </div>
+                            </div>
+                            <div class="accordion-album">
+                                <button class="accordion-btn">
+                                    <h4 class="sect-sub-title">2017 - Campursari Dangdut Koplo</h4>
+                                </button>
+                                <div class="accordion-panel">
+                                    <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Fans Quote -->
+        <section id="fans">
+            <div class="container">
+                <div class="section-header">
+                    <h3 class="fans-quote">"Goodbye to The Godfather of Broken Heart, your work is timeless" -- <strong>Fans</strong></h3>
+                    <h4 class="fans-quote">If you have time, you should read more about this incredible human being on his <a id="tribute-link" href="https://en.wikipedia.org/wiki/Didi_Kempot" target="_blank">Wikipedia</a></h4>
+                </div>
+                <div class="row">
+                    <div class="contact-links">
+                        <a href="https://twitter.com/didikempotid?lang=en" class="contact-detail" target="_blank"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                        <a href="https://www.instagram.com/didikempot_official/?hl=en" class="contact-detail" target="_blank"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                        <a href="https://www.youtube.com/channel/UCfv_crnYoIXCNme6039GU1A" class="contact-detail" target="_blank"><i class="fa fa-youtube" aria-hidden="true"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>        
+    </main>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="footer-copyright">
+            <div class="row">
+                <div class="copyright-content">
+                    <h5>Created & Development by Muh. Taufik H.</h5>
+                    <p>2021&copy;Copyright <strong>opikoenkz@gmail.com</strong></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Style -->
+    <script src="asset/main.js"></script>
+</body>
+
+</html>

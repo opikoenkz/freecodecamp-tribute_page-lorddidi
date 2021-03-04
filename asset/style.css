@@ -1,0 +1,380 @@
+/*================== Import Google Fonts =================*/
+@import url("https://fonts.googleapis.com/css?family=Montserrat:500,700|Open+Sans");
+
+/*================== General =================*/
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+
+body {
+    font-family: 'Open Sans', Verdana, sans-serif;
+    background-color: #ffffff;
+    margin: 0px;
+    padding: 0px;
+    overflow-x: hidden; }
+
+img {
+    width: 100%;
+    height: auto;
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s; }
+
+Img:hover { 
+    opacity: 0.7; }
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins','Montserrat', sans-serif;
+    font-weight: 700;
+    color: #2e2e2e;
+    margin: 0 0 5px 0; }
+
+p {
+    font-family: 'Open Sans', Verdana, sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    line-height: 1.6;
+    color: #383838;
+    text-align: justify;
+    margin: 0 0 20px 0; } 
+
+ul, li {
+    padding: 0px;
+    margin: 2px;
+    list-style: none; }
+
+ol {
+    padding: 0;
+    margin: 2px; }
+    
+main {
+    overflow: auto;
+    padding: 5px 20px 10px 20px;
+    margin: 4px; }
+
+.container {
+    width: 100%;
+    margin-right: auto;
+    margin-left: auto; }
+
+.col-4 {
+    max-width: 33.33%; float: left; flex: 33.33%; padding: 0px 4px; }
+.col-6 {
+    max-width: 50%; float: left; flex: 50%; padding: 0 4px; }
+.col-8 {
+    max-width: 66.66%; float: left; flex: 66.66%; padding: 0 4px; }
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0 4px; }
+
+/*================== Header =================*/
+header {
+    padding: 8px;
+    margin-top: 20px; }
+
+.header-title { 
+    font-weight: 500;
+    color: #2e2e2e;
+    text-align: center;
+    position: relative; }
+
+.header-title hr {
+    width: 30%; }
+
+/*================== Section =================*/
+section {
+    padding: 20px 90px; }
+
+.section-header {
+    text-align: justify;
+    position: relative;
+    margin-bottom: 20px; }
+
+.section-title {
+    font-size: 36px;
+    color: #2e2e2e;
+    text-transform: uppercase; }
+
+/*================== Gallery =================*/
+#image img {
+    vertical-align: middle;
+    margin-top: 8px; }
+
+.images-text h5 {
+    font-size: 20px;
+    text-align:center;
+    padding: 5px; 
+    margin-top: 15px; }
+
+/*----- The Modal (background) -----*/
+.modal {
+    display: none;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+    left: 0;
+    top: 0;
+    padding-top: 100px;
+    z-index: 1; /* Sit on top */ }
+
+/*---- Modal Content (image) ----*/
+.modal-content {
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    margin: auto; }
+
+/*----- Caption of Modal Image -----*/
+#caption {
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    height: 150px;
+    color: #ccc;
+    text-align: center;
+    padding: 10px 0;
+    margin: auto; }
+
+/*----- Add Animation -----*/
+.modal-content, #caption {    
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s; }
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)} 
+    to {-webkit-transform:scale(1)} }
+
+@keyframes zoom {
+    from {transform:scale(0)} 
+    to {transform:scale(1)} }
+
+/*----- The Close Button -----*/
+.close {
+    font-size: 40px;
+    font-weight: bold;
+    color: #f1f1f1;
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    transition: 0.3s; }
+
+.close:hover, .close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer; }
+
+/*================== Biography =================*/
+article {
+    justify-content: center; 
+    padding: 8px;
+    margin: 12px;}
+
+/*----- Card-Box -----*/
+.card {
+    background-color: #fafafa;
+    border-radius: 5px;
+    box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.3);
+    padding: 5px;
+    margin: 4px 10px 20px 10px; }
+
+table {
+    font-size: 14px;
+    font-weight: 400;
+    border-collapse: collapse; }
+    
+td, th {
+    text-align: left;
+    padding: 2px; }
+
+/*================== Discography =================*/
+.album-title {
+    text-align: center;
+    margin-bottom: 10px; }
+
+.accordion-album {
+    padding: 1 px;
+    margin: 0px 12px 0px 12px; }
+
+/*----- Accordion -----*/
+.accordion-btn {
+    width: 100%;
+    background-color: #fcfcfc;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    text-align: center;
+    padding: 12px;
+    transition: 0.4s; }
+
+.active, .accordion-btn:hover {
+    outline: none;
+    background-color: #51f1a7;
+    cursor: pointer; }
+
+.accordion-panel {
+    display: none;
+    background-color: #f5f5f5;
+    overflow: hidden;
+    padding: 10px 15px 5px 15px; }
+
+.accordion-panel ul ol {
+    font-size: 13px;
+    font-weight: 400;
+    padding: 2px; }
+
+/*================== Fans =================*/
+#fans {
+    margin-top: 20px; }
+
+.fans {
+    position: relative;
+    margin-top: 20px; }
+
+.fans-quote {
+    text-align: center;
+    color: #2e2e2e; }
+
+/*----- Icons -----*/
+.contact-links {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px; }
+
+.contact-detail {
+    font-size: 30px;
+    color: #414141;
+    padding: 10px;
+    margin: 5px; }
+
+.contact-detail:hover{
+    color: #16774a; }
+
+/*================== Footer =================*/
+footer {
+    background-color: #2c2c2c;
+    margin-top: 5px; }
+
+.footer-copyright {
+    text-align: center;
+    padding: 5px; }
+
+.copyright-content {
+    padding-top: 10px;
+    padding-bottom: 10px; }
+
+.copyright-content h5 {
+    text-align: center;
+    color: #d6d6d6;
+    padding: 0px;
+    margin: 0px }
+
+.copyright-content p {
+    font-size: 10px;
+    text-align: center;
+    color: #b3b3b3;
+    padding: 0px;
+    margin: 0px }
+
+/*============= Media Queries ==============*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+    body {
+        margin: 0;
+    }
+    
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: 600;
+        margin: 0 0 2px 0; }
+    p {
+        font-weight: 400; }
+    
+    section {
+        padding: 2px; }
+    .section-title {
+        font-size: 22px;
+        margin-top: 10px; }
+    
+    .modal-content {
+        width: 100%; }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    body {
+        margin: 0; }
+
+    h1, h2, h3, h4, h5, h6 {
+        font-weight: 500;
+        margin: 0 0 2px 0; }
+    p {
+        font-weight: 300; }
+    
+    .col-s-4 {
+        max-width: 100%; flex: 100%; padding: 0px 2px; }
+    .col-s-6 {
+        max-width: 100%; flex: 100%; padding: 0px 2px; }
+    .col-s-8 {
+        max-width: 100%; flex: 100%; padding: 0px 2px; }
+
+    section {
+        padding: 2px; }
+    .section-title {
+        font-size: 22px;
+        font-weight: bold;
+        margin-top: 10px; }
+    .sect-sub-title {
+        font-size: 15px;
+        font-weight: bold; }
+
+    #title {
+        font-size: 24px;
+        font-weight: bold; }
+    .header-title hr {
+        width: 85%; }
+
+    #img-caption {
+        font-size: 15px; }
+
+    .modal-content {
+        width: 100%; }
+
+    .card {
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.3);
+        margin: 4px 10px 10px 10px; }
+
+    article p {
+        padding-top: 8px; }
+    
+    .album {
+        border: none;
+        border-radius: 4px;
+        box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.3);
+        padding-top: 15px;
+        padding-bottom: 10px;
+        margin-bottom: 20px; }
+    .album-title {
+        font-size: 18px;
+        font-weight: bold; }
+    
+    .fans-quote {
+        font-size: 14px; }
+    
+    .contact-links {
+        margin-top: 5px; }
+    .contact-detail {
+        padding: 5px 15px;
+        margin: 0px; }
+
+    footer {
+        margin: 0px; }
+}
+
