@@ -4,13 +4,19 @@
 /*================== VARIABLES CSS =================*/
 :root {
   /*========== Colors ==========*/
-  --body-color: #fafafa;
-  --nav-color: #252523;
-  --footer-color: #2c2c2c;
-  --title-color: #2e2e2e;
-  --text-color: #2e2d2d;
-  --icon-color: #252525;
-
+  --blue-deep: #2b89e0;
+  --cyan: #17a2b8;
+  --blue-donker: #0d0f13;
+  --pink: #dc143c;
+  --white: #fafafa;
+  --light: #dbdada;
+  --gray: #6c757d;
+  --secondary: #444e57;
+  --gray-blue: #363d44;
+  --dark-grey: #272626;
+  --dark: #0c0c0c;
+  --black: #050505;
+  --warning: #e2b41c;
   /*========== Font and typography ==========*/
   --normal-font-size: 1rem;
   --medium-font-size: 0.938rem;
@@ -32,9 +38,15 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Open Sans", Verdana, sans-serif;
-  background-color: var(--body-color);
+  background-color: var(--white);
+  padding: 0px;
+  margin: 0px;
   overflow-x: hidden;
 }
 
@@ -58,14 +70,14 @@ h5,
 h6 {
   font-family: "Poppins", "Montserrat", sans-serif;
   font-weight: var(--font-large);
-  color: var(--title-color);
+  color: var(--dark);
 }
 
 p {
   font-size: var(--normal-font-size);
   font-weight: var(--font-medium);
   line-height: 1.6;
-  color: var(--text-color);
+  color: var(--dark-grey);
   text-align: justify;
   margin-bottom: 0.6rem;
 }
@@ -127,7 +139,7 @@ header {
 .header-title {
   position: relative;
   font-weight: var(--font-semi-large);
-  color: var(--title-color);
+  color: var(--dark);
   text-align: center;
 }
 
@@ -165,7 +177,7 @@ section {
 
 .navbar-menu li .nav-link {
   font-weight: var(--font-semi-large);
-  color: var(--title-color);
+  color: var(--dark);
   padding: 1rem 1.4rem;
   transition: background 0.3s ease-in-out, color 0.3s ease-in-out;
 }
@@ -188,7 +200,7 @@ section {
 .menu-btn__lines::after {
   width: 1.5rem;
   height: 0.2rem;
-  background-color: var(--icon-color);
+  background-color: var(--dark);
   transition: all 0.5s ease-in-out;
 }
 
@@ -213,11 +225,11 @@ section {
 }
 .menu-btn.open .menu-btn__lines::before {
   transform: rotate(45deg) translate(-1.5rem, 1.5rem);
-  background-color: #ffffff;
+  background-color: var(--light);
 }
 .menu-btn.open .menu-btn__lines::after {
   transform: rotate(-45deg) translate(-1.5rem, -1.5rem);
-  background-color: #ffffff;
+  background-color: var(--light);
 }
 
 /*================== Gallery =================*/
@@ -257,7 +269,7 @@ section {
   width: 80%;
   max-width: 700px;
   height: 150px;
-  color: #cccccc;
+  color: var(--light);
   text-align: center;
   padding: 0.6rem 0;
   margin: auto;
@@ -297,13 +309,13 @@ section {
   right: 35px;
   font-size: 2.6rem;
   font-weight: var(--font-semi-large);
-  color: #f1f1f1;
+  color: var(--light);
   transition: 0.3s;
 }
 
 .close:hover,
 .close:focus {
-  color: #bbbbbb;
+  color: var(--light);
   text-decoration: none;
   cursor: pointer;
 }
@@ -317,7 +329,7 @@ article {
 
 /*----- Card-Box -----*/
 .card {
-  background-color: #fcfcfc;
+  background-color: var(--white);
   border-radius: 5px;
   box-shadow: 0 3px 7px 0 rgba(0, 0, 0, 0.3);
   padding: 0.25rem;
@@ -350,7 +362,7 @@ th {
 /*----- Accordion -----*/
 .accordion-btn {
   width: 100%;
-  background-color: #fcfcfc;
+  background-color: var(--white);
   border: none;
   border-radius: 5px;
   outline: none;
@@ -360,14 +372,14 @@ th {
 
 .active,
 .accordion-btn:hover {
-  background-color: #6f837a;
+  background-color: var(--gray);
   outline: none;
   cursor: pointer;
 }
 
 .accordion-panel {
   display: none;
-  background-color: #f5f5f5;
+  background-color: var(--white);
   overflow: hidden;
   padding: 0.6rem 0.95rem 0.25rem 0.95rem;
 }
@@ -390,7 +402,7 @@ th {
 
 .fans-quote {
   text-align: center;
-  color: var(--text-color);
+  color: var(--dark);
 }
 
 /*----- Icons -----*/
@@ -410,12 +422,12 @@ th {
 }
 
 .contact-detail:hover {
-  color: #fabf41;
+  color: var(--warning);
 }
 
 /*================== Footer =================*/
 footer {
-  background-color: var(--footer-color);
+  background-color: var(--black);
   margin-top: 0.25rem;
 }
 
@@ -430,7 +442,7 @@ footer {
 
 .copyright-content h5 {
   text-align: center;
-  color: #d6d6d6;
+  color: var(--light);
   padding: 0px;
   margin: 0px;
 }
@@ -438,25 +450,13 @@ footer {
 .copyright-content p {
   font-size: var(--small-font-size);
   text-align: center;
-  color: #b3b3b3;
+  color: var(--light);
   padding: 0px;
   margin: 0px;
 }
 
 /*============= Media Queries ==============*/
 @media screen and (min-width: 768px) and (max-width: 1024px) {
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-weight: var(--font-semi-large);
-  }
-  p {
-    font-weight: var(--font-medium);
-  }
-
   .col-md-4 {
     max-width: 33.33%;
     float: left;
@@ -558,9 +558,9 @@ footer {
     justify-content: space-evenly;
     top: 0;
     right: 0;
-    width: 85%;
-    height: 100vh;
-    background-color: var(--nav-color);
+    width: 55%;
+    height: 25vh;
+    background-color: var(--dark);
     transform: translateX(100vw);
     transition: all 0.5s;
     opacity: 0;
@@ -580,12 +580,13 @@ footer {
     align-items: center;
     width: 100%;
     height: 100%;
-    font-size: 1.4rem;
-    color: #ececec;
+    font-size: 1rem;
+    color: var(--light);
+    padding: 0.25rem;
   }
 
   .navbar-menu li .nav-link:hover {
-    color: #e2b41c;
+    color: var(--warning);
     cursor: pointer;
   }
 
